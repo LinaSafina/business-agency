@@ -1,0 +1,101 @@
+/* Common styles */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 27px;
+  color: #fff;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.section-title {
+  font-family: 'Oswald', sans-serif;
+}
+/* End of Common styles */
+
+/* Header styles */
+.header {
+  background-color: #000;
+  padding: 1.4rem 1.7rem 2.4rem 3.7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  letter-spacing: 0.1rem;
+  color: #eee;
+}
+
+.logo span {
+  color: #9e0e09;
+}
+
+.burger {
+  width: 3.6rem;
+  height: 0.2rem;
+  position: relative;
+  background-color: #eee;
+  cursor: pointer;
+}
+
+.burger::before {
+  content: '';
+  width: 1.8rem;
+  height: 0.2rem;
+  position: absolute;
+  top: -8px;
+  left: 0;
+  background-color: #eee;
+}
+
+.burger::after {
+  content: '';
+  width: 1.8rem;
+  height: 0.2rem;
+  position: absolute;
+  bottom: -8px;
+  right: 0;
+  background-color: #eee;
+}
+/* End of Header styles */
+
+/* Banner styles */
+
+/* End of Banner styles */
