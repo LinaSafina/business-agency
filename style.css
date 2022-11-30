@@ -100,18 +100,29 @@ textarea {
 /* Header styles */
 .header {
   position: fixed;
-  top: 0;
+  top: -8rem;
   left: 0;
   right: 0;
-  background-color: #000;
-  padding: 1.4rem 1.7rem 2.4rem 3.7rem;
+  height: 8rem;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 2rem 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 99;
+  animation: headerAnimation 1s 0.5s forwards;
+  transition: height 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+.header.active {
+  height: 100vh;
 }
 
 .logo {
+  position: absolute;
+  top: 2rem;
+  left: 3rem;
   font-weight: 700;
   font-size: 2.5rem;
   line-height: 3rem;
@@ -121,34 +132,96 @@ textarea {
 
 .logo span {
   color: #9e0e09;
+  font-size: 3.5rem;
 }
 
 .burger {
-  width: 3.6rem;
-  height: 0.2rem;
-  position: relative;
-  background-color: #eee;
+  position: absolute;
+  top: 2.5rem;
+  right: 3rem;
+  width: 4rem;
+  height: 3rem;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.burger__line {
+  width: 100%;
+  height: 0.2rem;
+  background-color: #eee;
 }
 
 .burger::before {
   content: '';
-  width: 1.8rem;
+  width: 2rem;
   height: 0.2rem;
   position: absolute;
-  top: -8px;
-  left: 0;
+  top: 0;
+  right: calc(100% - 2rem);
   background-color: #eee;
+  transition: all 0.2s ease-in-out;
 }
 
 .burger::after {
   content: '';
-  width: 1.8rem;
+  width: 2rem;
   height: 0.2rem;
   position: absolute;
-  bottom: -8px;
+  bottom: 0;
   right: 0;
   background-color: #eee;
+  transition: all 0.3s;
+}
+
+.header.active .burger::before {
+  transform: translate(100%, -0.1rem) rotate(35deg);
+  top: 50%;
+  transform-origin: right;
+}
+
+.header.active .burger::after {
+  transform: translateY(0.1rem) rotateZ(-35deg);
+  bottom: 50%;
+  transform-origin: right;
+}
+
+.nav {
+  width: 100%;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 100vh;
+  width: fit-content;
+  margin: 0 auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.7s;
+}
+
+.header.active .nav__list {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.7s 0.3s;
+}
+
+.nav__list-item {
+  text-transform: uppercase;
+  margin: 1rem 0;
+  padding: 2rem;
+  font-size: 4rem;
+  letter-spacing: 0.3rem;
+  font-weight: 600;
+  transition: color 0.4s;
+}
+
+.nav__list-item:hover {
+  color: #9e0e09;
 }
 /* End of Header styles */
 
@@ -473,6 +546,16 @@ textarea {
   100% {
     opacity: 1;
     visibility: visible;
+  }
+}
+
+@keyframes headerAnimation {
+  0% {
+    top: -8rem;
+  }
+
+  100% {
+    top: 0;
   }
 }
 /* End of Keyframe animations */
