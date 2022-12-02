@@ -11,10 +11,11 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700;800&family=Oswald:wght@200;300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <script
-      src="https://kit.fontawesome.com/95cf3c495e.js"
-      crossorigin="anonymous"
-    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+
     <link href="style.css" rel="stylesheet" />
   </head>
   <body>
@@ -57,7 +58,9 @@
             <span class="banner__title-4">Маркетинг</span>
           </h1>
           <p class="banner__subtitle">Lorem ipsum dolor.</p>
-          <button class="button banner__button">Узнать больше</button>
+          <button class="button banner__button button--default">
+            Узнать больше
+          </button>
         </div>
       </div>
     </section>
@@ -99,61 +102,120 @@
     <section class="pricing" id="pricing">
       <div class="container">
         <div class="pricing__inner">
-          <div class="column">
-            <h2 class="section-title">Цены</h2>
-            <div class="section-line"></div>
-          </div>
-          <div class="column">
-            <ul class="pricing__list">
-              <li class="pricing__list-item">
+          <h2 class="section-title">Цены</h2>
+          <div class="section-line"></div>
+          <div class="swiper pricing__swiper">
+            <ul class="pricing__list swiper-wrapper">
+              <li class="pricing__list-item swiper-slide">
                 <div class="card card--free">
-                  <p class="card__title">Бесплатно</p>
-                  <p class="card__price">29999</p>
+                  <h3 class="card__title">Бесплатно</h3>
+                  <p class="card__price">29.999</p>
                   <ul class="card__list">
-                    <li class="card__list-item">Консультации раз в неделю</li>
                     <li class="card__list-item">
-                      Продумывание стратегии на год
+                      <i class="fa-solid fa-check"></i
+                      ><span>Часовая онлайн-консультация</span>
                     </li>
                     <li class="card__list-item">
-                      Встреча со специалистом по рекламе
+                      <i class="fa-solid fa-xmark"></i
+                      ><span>Продумывание стратегии на год</span>
                     </li>
-                    <li class="card__list-item">Поддержка 24/7</li>
+                    <li class="card__list-item">
+                      <i class="fa-solid fa-xmark"></i
+                      ><span>Встреча со специалистом по рекламе</span>
+                    </li>
+                    <li class="card__list-item">
+                      <i class="fa-solid fa-xmark"></i
+                      ><span>Поддержка 24/7</span>
+                    </li>
                   </ul>
-                  <button class="button">Выбрать план</button>
+                  <button class="button card__button">Выбрать</button>
+                </div>
+                <div class="card-back card-back--free">
+                  <a class="card-back__link" href="#">Заказать</a>
                 </div>
               </li>
-              <li class="pricing__list-item">
+              <li class="pricing__list-item swiper-slide">
                 <div class="card card--basic">
-                  <p class="card__title">Бесплатно</p>
-                  <p class="card__price">29999</p>
+                  <h3 class="card__title">Бесплатно</h3>
+                  <p class="card__price">29.999</p>
                   <ul class="card__list">
-                    <li class="card__list-item">Консультации раз в неделю</li>
                     <li class="card__list-item">
-                      Продумывание стратегии на год
+                      <i class="fa-solid fa-check"></i
+                      ><span>Консультации раз в неделю</span>
                     </li>
                     <li class="card__list-item">
-                      Встреча со специалистом по рекламе
+                      <i class="fa-solid fa-check"></i
+                      ><span>Продумывание стратегии на год</span>
                     </li>
-                    <li class="card__list-item">Поддержка 24/7</li>
+                    <li class="card__list-item">
+                      <i class="fa-solid fa-xmark"></i
+                      ><span>Встреча со специалистом по рекламе</span>
+                    </li>
+                    <li class="card__list-item">
+                      <i class="fa-solid fa-xmark"></i
+                      ><span>Поддержка 24/7</span>
+                    </li>
                   </ul>
-                  <button class="button">Выбрать план</button>
+                  <button class="button card__button">Выбрать</button>
+                </div>
+                <div class="card-back card-back--basic">
+                  <a class="card-back__link" href="#">Заказать</a>
                 </div>
               </li>
-              <li class="pricing__list-super">
-                <div class="card card--blue">
-                  <p class="card__title">Бесплатно</p>
-                  <p class="card__price">29999</p>
+              <li class="pricing__list-item swiper-slide">
+                <div class="card card--standard">
+                  <h3 class="card__title">Бесплатно</h3>
+                  <p class="card__price">29.999</p>
                   <ul class="card__list">
-                    <li class="card__list-item">Консультации раз в неделю</li>
                     <li class="card__list-item">
-                      Продумывание стратегии на год
+                      <i class="fa-solid fa-check"></i
+                      ><span>Консультации раз в неделю</span>
                     </li>
                     <li class="card__list-item">
-                      Встреча со специалистом по рекламе
+                      <i class="fa-solid fa-check"></i
+                      ><span>Продумывание стратегии на год</span>
                     </li>
-                    <li class="card__list-item">Поддержка 24/7</li>
+                    <li class="card__list-item">
+                      <i class="fa-solid fa-check"></i
+                      ><span>Встреча со специалистом по рекламе</span>
+                    </li>
+                    <li class="card__list-item">
+                      <i class="fa-solid fa-xmark"></i
+                      ><span>Поддержка 24/7</span>
+                    </li>
                   </ul>
-                  <button class="button">Выбрать план</button>
+                  <button class="button card__button">Выбрать</button>
+                </div>
+                <div class="card-back card-back--standard">
+                  <a class="card-back__link" href="#">Заказать</a>
+                </div>
+              </li>
+              <li class="pricing__list-item swiper-slide">
+                <div class="card card--premium">
+                  <h3 class="card__title">Бесплатно</h3>
+                  <p class="card__price">29.999</p>
+                  <ul class="card__list">
+                    <li class="card__list-item">
+                      <i class="fa-solid fa-check"></i
+                      ><span>Консультации раз в неделю</span>
+                    </li>
+                    <li class="card__list-item">
+                      <i class="fa-solid fa-check"></i
+                      ><span>Продумывание стратегии на год</span>
+                    </li>
+                    <li class="card__list-item">
+                      <i class="fa-solid fa-check"></i
+                      ><span>Встреча со специалистом по рекламе</span>
+                    </li>
+                    <li class="card__list-item">
+                      <i class="fa-solid fa-check"></i
+                      ><span>Поддержка 24/7</span>
+                    </li>
+                  </ul>
+                  <button class="button card__button">Выбрать</button>
+                </div>
+                <div class="card-back card-back--premium">
+                  <a class="card-back__link" href="#">Заказать</a>
                 </div>
               </li>
             </ul>
@@ -167,65 +229,62 @@
     <section class="contacts" id="contacts">
       <div class="container">
         <div class="contacts__inner">
-          <div class="column">
-            <h2 class="section-title">Контакты</h2>
-            <div class="section-line"></div>
-          </div>
-          <div class="column">
-            <ul class="contacts__list">
-              <li class="contacts__list-item">
-                <div class="contacts__icon">
-                  <i class="fa-solid fa-mobile-screen"></i>
-                </div>
-                <div class="contacts__category">Телефон</div>
-                <ul>
-                  <li>+79998888888</li>
-                  <li>+79998888888</li>
-                </ul>
-              </li>
-              <li class="contacts__list-item">
-                <div class="contacts__icon">
-                  <i class="fa-sharp fa-solid fa-location-dot"></i>
-                </div>
-                <div class="contacts__category">Телефон</div>
-                <ul>
-                  <li>+79998888888</li>
-                  <li>+79998888888</li>
-                </ul>
-              </li>
-              <li class="contacts__list-item">
-                <div class="contacts__icon">
-                  <i class="fa-solid fa-envelope"></i>
-                </div>
-                <div class="contacts__category">Телефон</div>
-                <ul>
-                  <li>+79998888888</li>
-                  <li>+79998888888</li>
-                </ul>
-              </li>
-            </ul>
-            <form class="contacts__form">
-              <h3 class="contacts__form-title">Подписаться на рассылку</h3>
-              <input
-                class="input contacts__input"
-                type="text"
-                placeholder="Ваше имя"
-                name="name"
-              />
-              <input
-                class="input contacts__input"
-                type="email"
-                placeholder="Ваш email"
-                name="email"
-              />
-              <textarea
-                class="input contacts__input"
-                name="message"
-                placeholder="Ваше сообщение"
-              ></textarea>
-              <button class="button">Отправить</button>
-            </form>
-          </div>
+          <h2 class="section-title">Контакты</h2>
+          <div class="section-line"></div>
+
+          <ul class="contacts__list">
+            <li class="contacts__list-item">
+              <div class="contacts__icon">
+                <i class="fa-solid fa-mobile-screen"></i>
+              </div>
+              <div class="contacts__category">Телефон</div>
+              <ul>
+                <li>+79998888888</li>
+                <li>+79998888888</li>
+              </ul>
+            </li>
+            <li class="contacts__list-item">
+              <div class="contacts__icon">
+                <i class="fa-sharp fa-solid fa-location-dot"></i>
+              </div>
+              <div class="contacts__category">Телефон</div>
+              <ul>
+                <li>+79998888888</li>
+                <li>+79998888888</li>
+              </ul>
+            </li>
+            <li class="contacts__list-item">
+              <div class="contacts__icon">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div class="contacts__category">Телефон</div>
+              <ul>
+                <li>+79998888888</li>
+                <li>+79998888888</li>
+              </ul>
+            </li>
+          </ul>
+          <form class="contacts__form">
+            <h3 class="contacts__form-title">Подписаться на рассылку</h3>
+            <input
+              class="input contacts__input"
+              type="text"
+              placeholder="Ваше имя"
+              name="name"
+            />
+            <input
+              class="input contacts__input"
+              type="email"
+              placeholder="Ваш email"
+              name="email"
+            />
+            <textarea
+              class="input contacts__input"
+              name="message"
+              placeholder="Ваше сообщение"
+            ></textarea>
+            <button class="button">Отправить</button>
+          </form>
         </div>
       </div>
     </section>
@@ -249,6 +308,13 @@
     </footer>
     <!-- End of Footer -->
 
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <script
+      src="https://kit.fontawesome.com/95cf3c495e.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="script.js"></script>
   </body>
 </html>
