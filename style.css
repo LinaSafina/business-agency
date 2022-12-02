@@ -1,3 +1,5 @@
+/* TODO: Add fonts */
+
 /* Common styles */
 *,
 *::after,
@@ -11,6 +13,7 @@
 
 html {
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -75,13 +78,16 @@ a {
 .input {
   background-color: #444444;
   width: 100%;
-  padding: 1.4rem;
+  padding: 1.5rem;
+  color: #fff;
+  letter-spacing: 0.2rem;
+  font-size: 1.6rem;
+  font-family: 'Oswald', sans-serif;
 }
 
 .input::placeholder {
   letter-spacing: 0.1rem;
   font-size: 1.6rem;
-  line-height: 2.4rem;
   font-weight: 300;
   color: #757575;
   font-family: 'Oswald', sans-serif;
@@ -597,10 +603,16 @@ textarea {
 }
 
 .contacts__inner {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 5rem 0;
+}
+
+.contacts__wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 .contacts__list {
@@ -617,22 +629,22 @@ textarea {
   align-items: center;
 }
 
-.contacts__icon i {
+.contacts__list-item i {
   color: #7a1010;
-  font-size: 4.6rem;
+  font-size: 5rem;
 }
 
 .contacts__category {
   font-weight: 700;
-  font-size: 2.2rem;
-  line-height: 2.6rem;
+  font-size: 2.5rem;
   color: #ccc;
+  margin: 2rem 0;
 }
 
 .contacts__list-item ul {
   font-size: 1.5rem;
   line-height: 2.5rem;
-  color: #aaaaaa;
+  color: #aaa;
 }
 
 .contacts__form {
@@ -647,10 +659,23 @@ textarea {
 .contacts__form-title {
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 3.6rem;
+  font-size: 4rem;
   line-height: 6rem;
   color: #ccc;
-  margin-bottom: 2.7rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.form__button {
+  width: 100%;
+  border-radius: 0;
+  padding: 1.5rem;
+  transition: background 0.3s;
+  background: #7a1010;
+}
+
+.form__button:hover {
+  background: #5f0303;
 }
 /* End of Contacts */
 
@@ -658,11 +683,13 @@ textarea {
 .footer {
   background-color: #202122;
   padding: 4rem 0;
+  height: 12rem;
 }
 
 .footer__inner {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .footer__list {
@@ -674,7 +701,17 @@ textarea {
 }
 
 .footer__list-item {
-  margin-right: 2rem;
+  margin-right: 3rem;
+}
+
+.footer__link {
+  letter-spacing: 0.1rem;
+  transition: color 0.3s;
+  text-transform: uppercase;
+}
+
+.footer__link:hover {
+  color: #862323;
 }
 
 .footer__copyright {
