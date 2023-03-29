@@ -21,7 +21,6 @@ body {
   font-family: 'Noto Sans', sans-serif;
   font-weight: 400;
   font-size: 1.8rem;
-  line-height: 130%;
   color: #fff;
 }
 
@@ -325,13 +324,11 @@ textarea {
   background-color: #222020;
   display: flex;
   position: relative;
-  min-height: 100vh;
   padding: 5rem 0;
 }
 
 .about-us__inner {
   width: 100%;
-  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -341,7 +338,6 @@ textarea {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  min-height: 100vh;
 }
 
 .video-wrapper {
@@ -440,7 +436,7 @@ textarea {
 }
 
 .pricing__inner {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -462,7 +458,11 @@ textarea {
   box-shadow: 2rem 2rem 6rem rgba(0, 0, 0, 0.7);
   border-radius: 1rem;
   width: 28rem !important;
-  height: 50rem !important;
+  height: 60rem !important;
+}
+
+.swiper {
+  width: 90%;
 }
 
 .card {
@@ -609,7 +609,7 @@ textarea {
 }
 
 .contacts__inner {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -690,8 +690,7 @@ textarea {
 /* Footer */
 .footer {
   background-color: #202122;
-  padding: 4rem 0;
-  height: 12rem;
+  padding: 2rem 0;
 }
 
 .footer__inner {
@@ -706,10 +705,7 @@ textarea {
   line-height: 2.2rem;
   letter-spacing: 0.1rem;
   color: #ccc;
-}
-
-.footer__list-item {
-  margin-right: 3rem;
+  column-gap: 6rem;
 }
 
 .footer__link {
@@ -847,6 +843,11 @@ textarea {
     font-size: 7px;
   }
 
+  .section-title {
+    margin: 0;
+    margin-bottom: 3rem;
+  }
+
   .about-us__inner,
   .pricing__inner,
   .contacts__inner {
@@ -869,6 +870,81 @@ textarea {
 
   .contacts__wrapper {
     width: 80%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    padding: 0 2rem;
+  }
+
+  .about-us__wrapper {
+    align-items: center;
+  }
+
+  .video-wrapper {
+    width: 90%;
+  }
+
+  .about-us__quote {
+    width: 90%;
+  }
+
+  .footer__inner {
+    flex-direction: column;
+  }
+
+  .footer__list {
+    margin-bottom: 2rem;
+    width: 90%;
+    justify-content: space-between;
+    column-gap: 1rem;
+  }
+
+  .footer__copyright {
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 6px;
+  }
+
+  .banner__title span {
+    font-size: 7rem;
+  }
+
+  .contacts__wrapper {
+    padding: 0;
+  }
+
+  .contacts__list {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .banner__title span {
+    font-size: 6rem;
+  }
+
+  span.banner__title-2 {
+    font-size: 4rem;
+  }
+
+  .section-title {
+    font-size: 8rem;
+  }
+
+  .contacts__category {
+    font-size: 1.5rem;
+  }
+
+  .contacts__form-title {
+    font-size: 2rem;
   }
 }
 /* End of Media Queries */
