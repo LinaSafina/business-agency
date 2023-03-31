@@ -17,4 +17,4 @@ The contact us section provides a form that visitors can use to get in touch wit
 The website was developed using ES6 and pure CSS. CSS animations were used to create the different animations on the landing page. The Swiper plugin was used to create the pricing section. 
 
 ### Deployment
-The website is hosted on GitHub Pages - [coming soon...](https://linasafina.github.io/business-agency/)
+The website is hosted on GitHub Pages - [business-agency](https://linasafina.github.io/business-agency/)
